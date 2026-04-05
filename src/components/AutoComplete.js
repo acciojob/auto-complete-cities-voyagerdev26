@@ -21,9 +21,9 @@ const AutoComplete=({suggestions})=>{
     setClassChange("disable");
   }
   return (
-    <div>
-      <form>
-        <input type="text" onChange={handleChange} value={inputVal}></input>
+    <div className="container">
+      <form className="form-container">
+        <input className="inputFill" type="text" onChange={handleChange} value={inputVal}></input>
         <select className={classChange} onChange={handleSelectChange}>
 
           { suggestions.filter(country=> country.toLowerCase().includes(inputVal) ).map(item=> <option key={item} value={item}>{item}</option>)}
